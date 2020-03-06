@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8fed88a5-ae21-4ca9-80b9-c0752adb71fb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YOwf9CESTM7grWjax2fYCRpK5u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RunManager" selected="Application.WebCrawlerApplication">
+    <configuration name="App5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App5" />
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App6" />
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebCrawlerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.WebCrawlerApplication" />
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebCrawlerApplicationTests.selectLanguagesForTranslatorToUse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mateuszbugaj.webCrawler" />
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.WebCrawlerApplicationTests" />
+      <option name="METHOD_NAME" value="selectLanguagesForTranslatorToUse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebCrawlerApplicationTests.testOfSearchWithNewsSearcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mateuszbugaj.webCrawler" />
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.WebCrawlerApplicationTests" />
+      <option name="METHOD_NAME" value="testOfSearchWithNewsSearcher" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WebCrawlerApplication" />
+        <item itemvalue="Application.App6" />
+        <item itemvalue="JUnit.WebCrawlerApplicationTests.selectLanguagesForTranslatorToUse" />
+        <item itemvalue="Application.App5" />
+        <item itemvalue="JUnit.WebCrawlerApplicationTests.testOfSearchWithNewsSearcher" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fed88a5-ae21-4ca9-80b9-c0752adb71fb" name="Default Changelist" comment="" />
+      <created>1582827048706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582827048706</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2403" y="173" key="#Plugins" timestamp="1582884384171">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state x="552" y="178" key="#Plugins/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582883850091" />
+    <state x="2403" y="173" key="#Plugins/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582884384171" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583356125257">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583356125257" />
+    <state x="2589" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582922702626" />
+    <state x="87" y="121" width="774" height="810" key="DiffContextDialog" timestamp="1582910204102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="87" y="121" width="774" height="810" key="DiffContextDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582910204102" />
+    <state x="923" y="167" key="FileChooserDialogImpl" timestamp="1583170968941">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="923" y="167" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583170968941" />
+    <state x="2728" y="162" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582907606965" />
+    <state width="1877" height="189" key="GridCell.Tab.0.bottom" timestamp="1583519985194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583519985194" />
+    <state width="1637" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583359555457" />
+    <state width="1877" height="189" key="GridCell.Tab.0.center" timestamp="1583519985194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="189" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583519985194" />
+    <state width="1637" height="324" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583359555457" />
+    <state width="1877" height="189" key="GridCell.Tab.0.left" timestamp="1583519985194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="189" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583519985194" />
+    <state width="1637" height="324" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583359555457" />
+    <state width="1877" height="189" key="GridCell.Tab.0.right" timestamp="1583519985194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="189" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583519985194" />
+    <state width="1637" height="324" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583359555457" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582928680998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582928680998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582928680998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582928680998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1583008956089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583008956089" />
+    <state x="2323" y="157" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582884154311" />
+    <state x="335" y="208" key="new project wizard" timestamp="1583008161784">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="335" y="208" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583008161784" />
+    <state x="2331" y="123" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582907608642" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583008914622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583008914622" />
+    <state x="2465" y="219" width="670" height="659" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582884157313" />
+  </component>
+</project>
