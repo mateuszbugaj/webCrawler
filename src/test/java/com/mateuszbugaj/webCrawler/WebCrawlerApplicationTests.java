@@ -54,4 +54,5 @@ class WebCrawlerApplicationTests {
 		translatorCollector.close();
 	}
 
+
 }

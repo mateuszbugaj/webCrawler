@@ -1,5 +1,7 @@
 package com.mateuszbugaj.webCrawler;
 
+import org.apache.commons.collections4.MultiValuedMap;
+import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -249,6 +251,22 @@ class App6{
 
         list3 = list2.stream().filter(element -> Arrays.stream(list1).anyMatch(i -> i.equals(element))).collect(Collectors.toList());
         System.out.println(list3.toString());
+    }
+}
+
+class App7{
+    public static void main(String[] args) {
+        List<String > list1 = Arrays.asList("One", "Two", "Three", "Four", "Five");
+        List<String > list2 = Arrays.asList("Six", "Seven", "Eight", "Nine", "Ten");
+
+        MultiValuedMap<String , String > map = new ArrayListValuedHashMap<>();
+        map.put("Value", "One");
+        map.put("Value", "Two");
+        map.put("Value", "Three");
+
+        map.asMap().forEach((v,k) -> {
+            System.out.println(v + " -> " + k.toString());
+        });
     }
 }
 

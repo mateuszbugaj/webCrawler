@@ -1,5 +1,7 @@
 package com.mateuszbugaj.webCrawler;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,10 +11,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class NewsSearcher{
+    private static Logger logger = LogManager.getLogger(NewsSearcher.class);
     private WebElement searchTextArea;
     private WebDriver driver;// = new ChromeDriver();
     private WebDriverWait driverWait;
@@ -25,7 +30,7 @@ public class NewsSearcher{
         options.addArguments("--lang=en-ca"); // to enable english version
         driver = new ChromeDriver(options);
         driverWait = new WebDriverWait(driver, 5);
-        driver.manage().window().fullscreen();
+        //driver.manage().window().fullscreen();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.get(TRANSLATOR_URL);
         textArea = driver.findElement(By.name("q"));
@@ -35,13 +40,34 @@ public class NewsSearcher{
         searchTextArea = driver.findElement(By.name("q"));
     }
 
-
-
-    public void /*todo: should return some kind of content */ search(String word){
+    public List<Headline> search(String word){
+        List<Headline> headlines = new ArrayList<>();
         searchTextArea = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.name("q")));
         searchTextArea.clear();
         searchTextArea.sendKeys(word);
         searchTextArea.submit();
+
+        List<WebElement> headlineLinks = driver.findElements(By.className("gG0TJc"));
+        for (WebElement link:headlineLinks){
+            String URL = link.findElement(By.className("dO0Ag")).findElement(By.className("lLrAF")).getAttribute("href");
+            String content = link.findElement(By.className("dO0Ag")).getText();
+            String description = link.findElement(By.className("st")).getText();
+
+
+
+            logger.debug("@" + URL);
+            logger.debug("  " + content);
+            logger.debug("      " + description); // todo: get rid of dots at the end of description by going it website and looking for words that appear after the lats dot in the description. Then collect words that appear after those words until the first dot. Then append them to the description in the place of three dots.
+
+            headlines.add(new Headline(URL, content, description));
+        }
+        logger.info("Received headlines: \n" + headlines.toString());
+
+        return headlines;
+    }
+
+    public void closeDown(){
+        driver.close();
     }
 }
 
