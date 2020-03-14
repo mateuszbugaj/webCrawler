@@ -26,6 +26,6 @@ public class Headline {
 
     @Override
     public String toString() {
-        return content;
+        return "\n"+content;
     }
 }

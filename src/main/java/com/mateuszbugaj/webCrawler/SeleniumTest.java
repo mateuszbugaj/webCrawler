@@ -5,6 +5,10 @@ import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Driver;
 import java.util.*;
 import java.util.concurrent.Executors;
@@ -258,15 +262,86 @@ class App7{
     public static void main(String[] args) {
         List<String > list1 = Arrays.asList("One", "Two", "Three", "Four", "Five");
         List<String > list2 = Arrays.asList("Six", "Seven", "Eight", "Nine", "Ten");
+        String key = "key";
 
-        MultiValuedMap<String , String > map = new ArrayListValuedHashMap<>();
-        map.put("Value", "One");
-        map.put("Value", "Two");
-        map.put("Value", "Three");
+        LinkedHashMap<String , String > map = new LinkedHashMap<>();
+        map.put(key, "One");
+        map.put(key, "Two");
+        map.put(key, "Three");
 
-        map.asMap().forEach((v,k) -> {
-            System.out.println(v + " -> " + k.toString());
+        map.forEach((k,v) -> {
+            System.out.println("k = " + k);
+            System.out.println("v = " + v.toString());
         });
+    }
+}
+
+class App8{
+    public static void main(String[] args) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("codes"));
+            String line = reader.readLine();
+            while (line!=null){
+                String code = line.substring(0,line.indexOf(" "));
+                String language = line.substring(line.lastIndexOf(" ")+1);
+                //System.out.println("Code: " + code + ", language: " + language);
+                line = reader.readLine();
+                //codes.put("Afrikaans","lr=lang_af");
+                System.out.println("codes.put(\""+language+"\",\""+code+"\");");
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+}
+
+/*
+Afrikaans{
+        @Override
+        public String getCode() {
+            return "lr=lang_af";
+        }
+
+        @Override
+        public String getName() {
+            return "Afrikaans";
+        }
+    };
+ */
+
+class App9{
+    public static void main(String[] args) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("codes"));
+            String line = reader.readLine();
+            while (line!=null){
+                String code = line.substring(0,line.indexOf(" "));
+                String language = line.substring(line.lastIndexOf(" ")+1);
+                line = reader.readLine();
+
+                System.out.println(language + "{\n" +
+                        "@Override\n" +
+                        "public String getCode() {\n" +
+                        "            return \""+code+"\";\n" +
+                        "        }" +
+                        "@Override\n" +
+                        "        public String getName() {\n" +
+                        "            return \""+language+"\";\n" +
+                        "        }\n" +
+                        "    },");
+
+
+                //System.out.println("codes.put(\""+language+"\",\""+code+"\");");
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
 

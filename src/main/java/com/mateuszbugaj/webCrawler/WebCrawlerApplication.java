@@ -13,7 +13,8 @@ public class WebCrawlerApplication {
 		System.setProperty("webdriver.chrome.driver","C:/Users/Mateusz/Desktop/chromedriver_win32(2)/chromedriver.exe");
 		logger.debug("Start of application");
 		Client client = new Client();
-		client.searchHeadlines("world");
+		client.searchHeadlines("virus");
+		//client.clearDatabase();
 		client.stopClient();
 	}
 

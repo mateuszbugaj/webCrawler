@@ -15,16 +15,18 @@ public class Client {
     private static Logger logger = LogManager.getLogger(Client.class);
     private TranslatorCollector translator;
     private NewsSearcher newsSearcher;
-    private FilesManager filesManager;
-    final String OUTPUT_FILE = "output";
+    private DBManager dbManager;
     private ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
 
     public Client(){
         logger.debug("Client initialization");
-        newsSearcher = new NewsSearcher();
-        filesManager = new FilesManager();
-        translator = TranslatorCollector.get().workWithLanguages("English", "Polish").maxSearchedLanguages(100);
-        filesManager.clearFiles(OUTPUT_FILE);
+        newsSearcher = NewsSearcher.get().timeRange("2020-1-15", "2020-1-20").maxHeadlines(5);
+        try {
+            dbManager = new DBManager();
+        } catch (Exception e){
+
+        }
+        translator = TranslatorCollector.get().workWithLanguages("English", "Umpalumpa", "Russian");
     }
 
     public void searchHeadlines(String... words){
@@ -37,7 +39,7 @@ public class Client {
         requestedWordsTranslation.forEach((language, wordsList) -> {
             logger.info("Language: " + language + ", words: " + wordsList.toString());
             wordsList.forEach(word -> {
-                List<Headline> headlinesForLanguage = newsSearcher.search(word);
+                List<Headline> headlinesForLanguage = newsSearcher.search(word,language);
                 receivedHeadlines.put(language, headlinesForLanguage);
             });
         });
@@ -47,6 +49,7 @@ public class Client {
                 String translatedContent = translator.translateToEnglish(headline.getContent());
                 String translatedDescription = translator.translateToEnglish(headline.getDescription());
                 Headline translatedHeadline = new Headline(headline.getURL(), translatedContent, translatedDescription);
+                dbManager.saveToDatabase(translatedHeadline);
                 translatedReceivedHeadlines.put(language,translatedHeadline);
             });
         });
@@ -62,10 +65,15 @@ public class Client {
 
 
     }
+
+    public void clearDatabase(){
+        dbManager.clearDatabase();
+    }
     public void stopClient(){
         executor.shutdown();
         newsSearcher.closeDown();
         translator.close();
+        dbManager.closeConnection();
     }
 
 

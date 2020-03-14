@@ -46,7 +46,7 @@ class WebCrawlerApplicationTests {
 	void selectLanguagesForTranslatorToUse(){
 		TranslatorCollector translatorCollector = new TranslatorCollector();
 		String language = "Polish";
-		translatorCollector.getLanguages().stream().forEach(i-> System.out.println(i));
+		translatorCollector.getAvailableLanguages().stream().forEach(i-> System.out.println(i));
 		translatorCollector.workWithLanguages(language);
 
 

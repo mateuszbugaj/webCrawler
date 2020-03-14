@@ -2,30 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fed88a5-ae21-4ca9-80b9-c0752adb71fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Headline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jul_2_12_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_2_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/DBManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/LanguageCodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/FilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/FilesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Headline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Headline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/NewsSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/NewsSearcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/SeleniumTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/TranslatorCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/TranslatorCollector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/WebCrawlerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/WebCrawlerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mateuszbugaj/webCrawler/WebCrawlerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mateuszbugaj/webCrawler/WebCrawlerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webCrawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webCrawler.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -60,15 +51,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../webCrawlerWithDatabase" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunManager" selected="Application.WebCrawlerApplication">
-    <configuration name="App6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App6" />
+    <configuration name="App7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App7" />
       <module name="webCrawler" />
       <extension name="coverage">
         <pattern>
@@ -80,8 +71,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App7" />
+    <configuration name="App8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App8" />
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App9" />
       <module name="webCrawler" />
       <extension name="coverage">
         <pattern>
@@ -106,22 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebCrawlerApplicationTests.selectLanguagesForTranslatorToUse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webCrawler" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mateuszbugaj.webCrawler" />
-      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.WebCrawlerApplicationTests" />
-      <option name="METHOD_NAME" value="selectLanguagesForTranslatorToUse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WebCrawlerApplicationTests.testOfSearchWithNewsSearcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webCrawler" />
       <extension name="coverage">
@@ -141,10 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WebCrawlerApplication" />
+        <item itemvalue="Application.App9" />
+        <item itemvalue="Application.App8" />
         <item itemvalue="Application.App7" />
         <item itemvalue="JUnit.WebCrawlerApplicationTests.testOfSearchWithNewsSearcher" />
-        <item itemvalue="Application.App6" />
-        <item itemvalue="JUnit.WebCrawlerApplicationTests.selectLanguagesForTranslatorToUse" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +147,19 @@
       <option name="presentableId" value="Default" />
       <updated>1582827048706</updated>
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1583672147900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583672147900</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2403" y="173" key="#Plugins" timestamp="1582884384171">
@@ -171,65 +171,89 @@
       <screen x="1920" y="0" width="1680" height="1010" />
     </state>
     <state x="2352" y="163" key="#Project_Structure/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583612789214" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583621073298">
+    <state x="729" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584006370561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583621073298" />
+    <state x="729" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584006370561" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1584138064222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584138064222" />
     <state x="2589" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582922702626" />
+    <state x="269" y="114" key="CommitChangelistDialog2" timestamp="1583672146765">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="269" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583672146765" />
     <state x="87" y="121" width="774" height="810" key="DiffContextDialog" timestamp="1582910204102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="87" y="121" width="774" height="810" key="DiffContextDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582910204102" />
-    <state x="923" y="167" key="FileChooserDialogImpl" timestamp="1583574839364">
+    <state x="997" y="286" key="FileChooserDialogImpl" timestamp="1584128572891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="923" y="167" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583574839364" />
-    <state x="2728" y="162" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582907606965" />
-    <state width="1637" height="322" key="GridCell.Tab.0.bottom" timestamp="1583659586742">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583621455651" />
-    <state width="1637" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583659586742" />
-    <state width="1637" height="322" key="GridCell.Tab.0.center" timestamp="1583659586741">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="322" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583621455651" />
-    <state width="1637" height="322" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583659586741" />
-    <state width="1637" height="322" key="GridCell.Tab.0.left" timestamp="1583659586741">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="322" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583621455651" />
-    <state width="1637" height="322" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583659586741" />
-    <state width="1637" height="322" key="GridCell.Tab.0.right" timestamp="1583659586741">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="322" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583621455651" />
-    <state width="1637" height="322" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583659586741" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582928680998">
+    <state x="997" y="286" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584128572891" />
+    <state width="1877" height="330" key="GridCell.Tab.0.bottom" timestamp="1584193280395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582928680998">
+    <state width="1877" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
+    <state width="1637" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
+    <state width="1877" height="330" key="GridCell.Tab.0.center" timestamp="1584193280395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582928680998">
+    <state width="1877" height="330" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
+    <state width="1637" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
+    <state width="1877" height="330" key="GridCell.Tab.0.left" timestamp="1584193280395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582928680998">
+    <state width="1877" height="330" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
+    <state width="1637" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
+    <state width="1877" height="330" key="GridCell.Tab.0.right" timestamp="1584193280395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582928680998" />
+    <state width="1877" height="330" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
+    <state width="1637" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583954602420">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583954602420" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1583954602420">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583954602420" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1583954602420">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583954602420" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1583954602420">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583954602420" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1584126837187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584126837187" />
+    <state x="808" y="272" key="NewModule_or_Project.wizard" timestamp="1584127941078">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="272" key="NewModule_or_Project.wizard/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584127941078" />
     <state x="2323" y="157" key="SettingsEditor" timestamp="1583612692706">
       <screen x="1920" y="0" width="1680" height="1010" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583008956089" />
     <state x="2323" y="157" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1583612692706" />
-    <state x="335" y="208" key="new project wizard" timestamp="1583574841232">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1583672153215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="335" y="208" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583574841232" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583672153215" />
+    <state x="694" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584007580306">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584007580306" />
+    <state x="335" y="208" key="new project wizard" timestamp="1584043623710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="335" y="208" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584043623710" />
     <state x="2331" y="123" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582907608642" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583008914622">
       <screen x="0" y="0" width="1920" height="1040" />
