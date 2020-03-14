@@ -28,21 +28,6 @@ class WebCrawlerApplicationTests {
 	}
 
 	@Test
-	void testOfSearchWithNewsSearcher(){
-		NewsSearcher newsSearcher = new NewsSearcher();
-
-		boolean searchComplete;
-		try {
-			newsSearcher.search("Good");
-			searchComplete = true;
-		} catch (InvalidSelectorException e){
-			searchComplete = false;
-		}
-
-		assert searchComplete;
-	}
-
-	@Test
 	void selectLanguagesForTranslatorToUse(){
 		TranslatorCollector translatorCollector = new TranslatorCollector();
 		String language = "Polish";

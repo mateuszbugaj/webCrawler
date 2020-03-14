@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fed88a5-ae21-4ca9-80b9-c0752adb71fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/DBManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/LanguageCodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Headline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/Headline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/NewsSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/NewsSearcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/SeleniumTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/TranslatorCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/TranslatorCollector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/WebCrawlerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mateuszbugaj/webCrawler/WebCrawlerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mateuszbugaj/webCrawler/WebCrawlerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mateuszbugaj/webCrawler/WebCrawlerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webCrawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webCrawler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webSource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webSource.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +41,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1YOwf9CESTM7grWjax2fYCRpK5u" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../webCrawlerWithDatabase" />
@@ -58,6 +60,19 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunManager" selected="Application.WebCrawlerApplication">
+    <configuration name="App10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App10" />
+      <module name="webCrawler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.App7" />
       <module name="webCrawler" />
@@ -110,29 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebCrawlerApplicationTests.testOfSearchWithNewsSearcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webCrawler" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mateuszbugaj.webCrawler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mateuszbugaj.webCrawler" />
-      <option name="MAIN_CLASS_NAME" value="com.mateuszbugaj.webCrawler.WebCrawlerApplicationTests" />
-      <option name="METHOD_NAME" value="testOfSearchWithNewsSearcher" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WebCrawlerApplication" />
+        <item itemvalue="Application.App10" />
         <item itemvalue="Application.App9" />
         <item itemvalue="Application.App8" />
         <item itemvalue="Application.App7" />
-        <item itemvalue="JUnit.WebCrawlerApplicationTests.testOfSearchWithNewsSearcher" />
       </list>
     </recent_temporary>
   </component>
@@ -158,6 +157,7 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
@@ -175,10 +175,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584006370561" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1584138064222">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1584217345214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584138064222" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584217345214" />
     <state x="2589" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582922702626" />
     <state x="269" y="114" key="CommitChangelistDialog2" timestamp="1583672146765">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -193,26 +193,26 @@
     </state>
     <state x="923" y="167" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583574839364" />
     <state x="997" y="286" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584128572891" />
-    <state width="1877" height="330" key="GridCell.Tab.0.bottom" timestamp="1584193280395">
+    <state width="1877" height="330" key="GridCell.Tab.0.bottom" timestamp="1584227595251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
-    <state width="1637" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
-    <state width="1877" height="330" key="GridCell.Tab.0.center" timestamp="1584193280395">
+    <state width="1877" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584227595251" />
+    <state width="1637" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584224978623" />
+    <state width="1877" height="330" key="GridCell.Tab.0.center" timestamp="1584227595251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
-    <state width="1637" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
-    <state width="1877" height="330" key="GridCell.Tab.0.left" timestamp="1584193280395">
+    <state width="1877" height="330" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584227595251" />
+    <state width="1637" height="330" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584224978623" />
+    <state width="1877" height="330" key="GridCell.Tab.0.left" timestamp="1584227595251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
-    <state width="1637" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
-    <state width="1877" height="330" key="GridCell.Tab.0.right" timestamp="1584193280395">
+    <state width="1877" height="330" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584227595251" />
+    <state width="1637" height="330" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584224978623" />
+    <state width="1877" height="330" key="GridCell.Tab.0.right" timestamp="1584227595251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584193280395" />
-    <state width="1637" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584034864930" />
+    <state width="1877" height="330" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584227595251" />
+    <state width="1637" height="330" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1584224978623" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583954602420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -255,10 +255,10 @@
     </state>
     <state x="335" y="208" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584043623710" />
     <state x="2331" y="123" key="new project wizard/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582907608642" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583008914622">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584207226514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1583008914622" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1584207226514" />
     <state x="2465" y="219" width="670" height="659" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1582884157313" />
   </component>
 </project>

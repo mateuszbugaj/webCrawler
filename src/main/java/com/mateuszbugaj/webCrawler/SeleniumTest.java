@@ -10,6 +10,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Driver;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -341,6 +344,16 @@ class App9{
             e.printStackTrace();
         }
 
+
+    }
+}
+
+class App10{
+    public static void main(String[] args) {
+        LocalDate date = LocalDate.parse("2020-01-01");
+        System.out.println(date.toString());
+        LocalDate newDate = date.plus(Period.ofDays(4));
+        System.out.println(newDate.toString());
 
     }
 }

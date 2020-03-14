@@ -4,31 +4,43 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBManager {
     private static Logger logger = LogManager.getLogger(DBManager.class);
     private Connection connection;
     private Statement statement;
-    private ResultSet resultSet;
 
     public DBManager() throws ClassNotFoundException, SQLException {
-        String URL= "jdbc:mysql://127.0.0.1:3306/web_crawler?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=GMT";
+        String schemaName = "web_crawler";
+        String MySQLServerURL= String.format("jdbc:mysql://127.0.0.1:3306/%s?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=GMT", schemaName);
         String username = "root";
         String password = "1234";
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        connection = DriverManager.getConnection(URL, username, password);
+        connection = DriverManager.getConnection(MySQLServerURL, username, password);
         statement = connection.createStatement();
         logger.debug("DBManager initialized, connection established");
     }
 
     public void saveToDatabase(Headline headline) {
         try {
-            //statement.executeUpdate("INSERT INTO headlines (url, content, descr) VALUES ('"+headline.getURL()+"','"+headline.getContent()+"','"+headline.getDescription()+"');");
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO headlines (url, content, descr) VALUES (?, ?, ?);");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO headlines (url, content, descr, lang, timeRangeStart, timeRangeStop) VALUES (?, ?, ?, ?, ?, ?);");
             preparedStatement.setString(1, headline.getURL());
             preparedStatement.setString(2, headline.getContent());
             preparedStatement.setString(3, headline.getDescription());
+            preparedStatement.setString(4, headline.getLanguage());
+
+            try {
+                preparedStatement.setDate(5, Date.valueOf(headline.getTimeRangeStart()));
+                preparedStatement.setDate(6, Date.valueOf(headline.getTimeRangeStop().toString()));
+            }catch (NullPointerException e){
+                preparedStatement.setDate(5, null);
+                preparedStatement.setDate(6, null);
+            }
+
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -45,6 +57,37 @@ public class DBManager {
         }
     }
 
+    public List<Headline> readFromDatabase(){
+        List<Headline> headlines = new ArrayList<>();
+
+        try {
+            ResultSet resultSet = statement.executeQuery("SELECT * from headlines");
+
+            while (resultSet.next()){
+                String url = resultSet.getString("url");
+                String content = resultSet.getString("content");
+                String description = resultSet.getString("descr");
+                String language = resultSet.getString("lang");
+                LocalDate timeRangeStart = null;
+                LocalDate timeRangeStop = null;
+
+                try {
+                    timeRangeStart = resultSet.getDate("timeRangeStart").toLocalDate();
+                    timeRangeStop = resultSet.getDate("timeRangeStop").toLocalDate();
+                } catch (NullPointerException e){
+
+                }
+
+                Headline receivedHeadline = new Headline(url, content, description, language, timeRangeStart, timeRangeStop);
+                headlines.add(receivedHeadline);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return headlines;
+    }
+
     public void closeConnection(){
         try {
             connection.close();
@@ -53,8 +96,4 @@ public class DBManager {
             e.printStackTrace();
         }
     }
-
-    //todo: clearTable()
-    //todo: search how to make values literal meaning that VARCHAR content does not interfere with sql statement
-
 }

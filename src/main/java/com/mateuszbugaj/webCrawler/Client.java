@@ -20,21 +20,21 @@ public class Client {
 
     public Client(){
         logger.debug("Client initialization");
-        newsSearcher = NewsSearcher.get().timeRange("2020-1-15", "2020-1-20").maxHeadlines(5);
+        translator = TranslatorCollector.get().workWithLanguages("English", "Na'vi", "Russian");
+        newsSearcher = NewsSearcher.get().timeRange("2020-01-15","2020-01-20",  2).maxHeadlines(1);
+
         try {
             dbManager = new DBManager();
         } catch (Exception e){
-
+            logger.error("Couldn't establish connection with database");
         }
-        translator = TranslatorCollector.get().workWithLanguages("English", "Umpalumpa", "Russian");
+
     }
 
     public void searchHeadlines(String... words){
         Map<String, List<String >> requestedWordsTranslation = translator.translateWords(words);
         Map<String , List<Headline>> receivedHeadlines = new HashMap<>();
         MultiValuedMap<String ,Headline> translatedReceivedHeadlines = new ArrayListValuedHashMap<>();
-
-        // todo: collect this to the data base
 
         requestedWordsTranslation.forEach((language, wordsList) -> {
             logger.info("Language: " + language + ", words: " + wordsList.toString());
@@ -48,27 +48,33 @@ public class Client {
             headlines.forEach(headline -> {
                 String translatedContent = translator.translateToEnglish(headline.getContent());
                 String translatedDescription = translator.translateToEnglish(headline.getDescription());
-                Headline translatedHeadline = new Headline(headline.getURL(), translatedContent, translatedDescription);
+                Headline translatedHeadline = new Headline(headline.getURL(), translatedContent, translatedDescription, language, headline.getTimeRangeStart(), headline.getTimeRangeStop());
                 dbManager.saveToDatabase(translatedHeadline);
                 translatedReceivedHeadlines.put(language,translatedHeadline);
             });
         });
-
-        translatedReceivedHeadlines.asMap().forEach((language, headlines) -> {
-            System.out.println("\nLanguage: " + language);
-            System.out.println("Headline: ");
-            headlines.forEach(headline -> {
-                System.out.printf(">> %s \n",headline.getContent());
-            });
-        });
-
-
 
     }
 
     public void clearDatabase(){
         dbManager.clearDatabase();
     }
+
+    public void showDatabaseContent(){
+        List<Headline> headlines = dbManager.readFromDatabase();
+
+        System.out.println("Database content:");
+        for(Headline headline:headlines){
+            if(headline.getTimeRangeStart()!=null){
+                System.out.println("Headline from: " + headline.getTimeRangeStart() +" - " + headline.getTimeRangeStop());
+            }
+            System.out.println("Language:" + headline.getLanguage());
+            System.out.println("Content: " + headline.getContent());
+            System.out.println("Description: " + headline.getDescription());
+        }
+
+    }
+
     public void stopClient(){
         executor.shutdown();
         newsSearcher.closeDown();

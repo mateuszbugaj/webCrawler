@@ -47,13 +47,19 @@ public class TranslatorCollector {
         moreButton = driver.findElement(By.xpath("//div[contains(@class, 'tlid-open-target-language-list')]"));
         source = driver.findElement(By.id("source"));
         availableLanguages = Arrays.stream(LanguageCodes.values()).map(LanguageCodes::getName).collect(Collectors.toSet());
+        selectedLanguages.add("English"); // default language
 
     }
 
+    /**
+     * Select available languages from requested and notify if language is not an option
+     * @param requestedLanguages - list of languages requested by user
+     * @return
+     */
     public TranslatorCollector workWithLanguages(String... requestedLanguages){
         selectedLanguages = Arrays.stream(requestedLanguages)
                 .filter(requested -> {
-                    if(Arrays.stream(LanguageCodes.values()).map(element -> element.getName()).anyMatch(name -> name.equalsIgnoreCase(requested))){
+                    if(Arrays.stream(LanguageCodes.values()).map(LanguageCodes::getName).anyMatch(name -> name.equalsIgnoreCase(requested))){
                         return true;
                     } else {
                         logger.error("Language " + requested + " is not available");
@@ -66,6 +72,12 @@ public class TranslatorCollector {
         return this;
     }
 
+    /**
+     * Translate words passed as the parameter to all selected languages.
+     * Collect results in HashMap with language being key and list of translated words the value.
+     * @param words - requested words to translate
+     * @return HashMap with list of translated words as values and languages as keys
+     */
     public Map<String, List<String >>  translateWords(String... words){
         Map<String, List<String >>  translatedWords = new HashMap<>();
         logger.debug("Words to translate: " + Arrays.toString(words));
@@ -87,16 +99,34 @@ public class TranslatorCollector {
         return translatedWords;
     }
 
+    /**
+     * Used to translate content and description of headlines to english to make them uniform and understandable.
+     * Language is set to english by default
+     * @param sentence - sentence to translate
+     * @return - translated sentence to english
+     */
     public String translateToEnglish(String sentence){
         String translatedSentence;
         translatedSentence = useTranslator(driverWait, sentence, "English");
         return translatedSentence;
     }
 
+    /**
+     * Translate 'word' to 'language'.
+     * 1) Clear source (text area with sentence to translate)
+     * 2) Check if requested language is already selected to reduce time
+     *      - If not, open list of languages and search for the right button and click it
+     * 3) Type 'word' in source and submit
+     * 4) Wait until value of translated sentence change and grab it as translated word.
+     * 5) Return translated word.
+     * @param driverWait
+     * @param word - requested fraze to translate
+     * @param language - requested language
+     * @return - translated fraze
+     */
     private String useTranslator(WebDriverWait driverWait,String word, String language){
         String translatedWord;
         source.clear();
-        source.sendKeys(word);
 
         List<WebElement> suggestedButtons = driver.findElements(By.xpath("//div[@class='tl-wrap']/div[@class='tl-sugg']/div[@class='sl-sugg-button-container']/div[@role='button']"));
         boolean isLanguageAlreadySelected = suggestedButtons
@@ -118,6 +148,9 @@ public class TranslatorCollector {
                 return null;
             }
         }
+
+        source.sendKeys(word);
+
         try {
             if(previousTranslatedWord!=null) {
                 driverWait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//span[@class='tlid-translation translation']")), previousTranslatedWord)));
