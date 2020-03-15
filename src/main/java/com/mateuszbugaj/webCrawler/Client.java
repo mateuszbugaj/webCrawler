@@ -5,9 +5,8 @@ import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.LocalDate;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -20,8 +19,17 @@ public class Client {
 
     public Client(){
         logger.debug("Client initialization");
-        translator = TranslatorCollector.get().workWithLanguages("English", "Na'vi", "Russian");
-        newsSearcher = NewsSearcher.get().timeRange("2020-01-15","2020-01-20",  2).maxHeadlines(1);
+
+        translator = TranslatorCollector.get()
+                .workWithLanguages(LanguageCodes.English.getName(),
+                        LanguageCodes.Italian.getName(),
+                        LanguageCodes.Chinese.getName(),
+                        LanguageCodes.Korean.getName(),
+                        LanguageCodes.Vietnamese.getName(),
+                        LanguageCodes.Polish.getName());
+        newsSearcher = NewsSearcher.get().
+                timeRange("2019-12-15","2020-03-15",  14)
+                .maxHeadlines(3);
 
         try {
             dbManager = new DBManager();
@@ -64,13 +72,30 @@ public class Client {
         List<Headline> headlines = dbManager.readFromDatabase();
 
         System.out.println("Database content:");
+        LocalDate previousDate = null;
+        LocalDate currentDate;
+        String previousLanguage = null;
+        String currentLanguage;
+
+
+        headlines.sort(Comparator.comparing(Headline::getLanguage));
+        headlines.sort(Comparator.comparing(Headline::getTimeRangeStart));
+
         for(Headline headline:headlines){
-            if(headline.getTimeRangeStart()!=null){
-                System.out.println("Headline from: " + headline.getTimeRangeStart() +" - " + headline.getTimeRangeStop());
+            currentDate = headline.getTimeRangeStart();
+            currentLanguage = headline.getLanguage();
+            if(previousDate==null || !currentDate.isEqual(previousDate)){
+                System.out.println("Date: " + currentDate);
             }
-            System.out.println("Language:" + headline.getLanguage());
-            System.out.println("Content: " + headline.getContent());
-            System.out.println("Description: " + headline.getDescription());
+            if(!currentLanguage.equalsIgnoreCase(previousLanguage)){
+                System.out.println("  #" + currentLanguage);
+            }
+
+            System.out.println("  -" + headline.getContent());
+            //System.out.println("   " + headline.getDescription());
+
+            previousDate = currentDate;
+            previousLanguage = currentLanguage;
         }
 
     }

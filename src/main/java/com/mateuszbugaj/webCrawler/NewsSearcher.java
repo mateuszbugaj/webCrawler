@@ -48,6 +48,12 @@ public class NewsSearcher{
         return timeRange(before, after);
     }
 
+    /**
+     * Set time range to search in specific time period
+     * @param before
+     * @param after
+     * @return
+     */
     public NewsSearcher timeRange(String before, String after){
         this.timeRangeStart = LocalDate.parse(after);
         this.timeRangeStop = LocalDate.parse(before);
@@ -55,12 +61,24 @@ public class NewsSearcher{
         return this;
     }
 
+    /**
+     * Set maximum number of headlines taken from every search
+     * @param max
+     * @return
+     */
     public NewsSearcher maxHeadlines(int max){
         maxHeadlines = max;
         logger.debug("Set max headlines per search: " + maxHeadlines);
         return this;
     }
 
+    /**
+     * Create URLs based on word to search, language code to search on the right side of the internet,
+     * time range and use it to search and collect headlines
+     * @param word
+     * @param language - name of language (preferably taken from LanguageCodes enums)
+     * @return
+     */
     public List<Headline> search(String word, String language){
         String languageCode = LanguageCodes.valueOf(language).getCode();
         List<Headline> headlines = new ArrayList<>();
@@ -70,10 +88,10 @@ public class NewsSearcher{
         if(interval!=null) {
             logger.debug("Headlines from " + timeRangeStart + " to " + timeRangeStop + " with interval equal " + interval.getDays() + " days");
             LocalDate newTimeRangeStart = timeRangeStart;
-            LocalDate newTimeRangeStop = timeRangeStop.plus(interval);
+            LocalDate newTimeRangeStop = timeRangeStart.plus(interval);
             do {
                 logger.debug("Headlines from " + newTimeRangeStart + " to " + newTimeRangeStop);
-                timeRangeAnnotation = String.format("%%20before:%s%%20after:%s", newTimeRangeStart, newTimeRangeStop);
+                timeRangeAnnotation = String.format("%%20after:%s%%20before:%s", newTimeRangeStart, newTimeRangeStop);
                 customURL = createCustomUrl(word, languageCode, timeRangeAnnotation); //todo: make case for multiple words
                 List<Headline> headlinesFromThisTimePeriod = getHeadlinesFromURL(customURL, language, newTimeRangeStart, newTimeRangeStop);
                 headlines.addAll(headlinesFromThisTimePeriod);
@@ -95,6 +113,7 @@ public class NewsSearcher{
 
         return headlines;
     }
+
 
     private List<Headline> getHeadlinesFromURL(String URL, String language, LocalDate timeRangeStart, LocalDate timeRangeStop){
         List<Headline> headlines = new ArrayList<>();

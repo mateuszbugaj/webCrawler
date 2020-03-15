@@ -33,7 +33,7 @@ public class TranslatorCollector {
     }
 
     private void init(){
-        //driver.manage().window().fullscreen();
+        driver.manage().window().fullscreen();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.get(TRANSLATOR_URL);
         driverWait = new WebDriverWait(driver, 5);
@@ -47,7 +47,7 @@ public class TranslatorCollector {
         moreButton = driver.findElement(By.xpath("//div[contains(@class, 'tlid-open-target-language-list')]"));
         source = driver.findElement(By.id("source"));
         availableLanguages = Arrays.stream(LanguageCodes.values()).map(LanguageCodes::getName).collect(Collectors.toSet());
-        selectedLanguages.add("English"); // default language
+        //selectedLanguages.add("English"); // default language
 
     }
 
@@ -90,6 +90,7 @@ public class TranslatorCollector {
         while (iterator.hasNext()){
             String currentLanguage = iterator.next();
             logger.debug("Translating to " + currentLanguage);
+            previousTranslatedWord = null;
             ArrayList<String > wordList = new ArrayList<>();
             for(String word:words){
                 wordList.add(useTranslator(driverWait,word,currentLanguage));
@@ -139,7 +140,7 @@ public class TranslatorCollector {
             try {
                 driver.findElements(By.xpath("//div[contains(@class, 'language_list_item_wrapper')]"))
                         .stream()
-                        .filter(i -> i.getText().equals(language))
+                        .filter(i -> i.getText().contains(language))
                         .findFirst()
                         .orElseThrow(() -> new Exception("Cannot find language button '" + language + "'"))
                         .click();
@@ -174,54 +175,3 @@ public class TranslatorCollector {
         driver.close();
     }
 }
-
-/*
-Search Language Codes
-
-lr=lang_af    Afrikaans
-lr=lang_ar    Arabic
-lr=lang_hy    Armenian
-lr=lang_be    Belarusian
-lr=lang_bg    Bulgarian
-lr=lang_ca    Catalan
-lr=lang_zh-CN Chinese (Simplified)
-lr=lang_zh-TW Chinese (Traditional)
-lr=lang_hr    Croatian
-lr=lang_cs    Czech
-lr=lang_da    Danish
-lr=lang_nl    Dutch
-lr=lang_en    English
-lr=lang_eo    Esperanto
-lr=lang_et    Estonian
-lr=lang_tl    Filipino
-lr=lang_fi    Finnish
-lr=lang_fr    French
-lr=lang_de    German
-lr=lang_el    Greek
-lr=lang_iw    Hebrew
-lr=lang_hi    Hindi
-lr=lang_hu    Hungarian
-lr=lang_is    Icelandic
-lr=lang_id    Indonesian
-lr=lang_it    Italian
-lr=lang_ja    Japanese
-lr=lang_ko    Korean
-lr=lang_lv    Latvian
-lr=lang_lt    Lithuanian
-lr=lang_no    Norwegian
-lr=lang_fa    Persian
-lr=lang_pl    Polish
-lr=lang_pt    Portuguese
-lr=lang_ro    Romanian
-lr=lang_ru    Russian
-lr=lang_sr    Serbian
-lr=lang_sk    Slovak
-lr=lang_sl    Slovenian
-lr=lang_es    Spanish
-lr=lang_sw    Swahili
-lr=lang_sv    Swedish
-lr=lang_th    Thai
-lr=lang_tr    Turkish
-lr=lang_uk    Ukrainian
-lr=lang_vi    Vietnamese
- */

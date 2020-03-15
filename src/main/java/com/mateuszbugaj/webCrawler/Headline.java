@@ -3,7 +3,6 @@ package com.mateuszbugaj.webCrawler;
 import java.time.LocalDate;
 
 public class Headline {
-    //todo: should it have also information about key word and language?
     private String URL;
     private String content;
     private String description;
@@ -53,4 +52,5 @@ public class Headline {
     public String toString() {
         return "\n"+content;
     }
+
 }
